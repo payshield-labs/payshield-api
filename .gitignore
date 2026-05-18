@@ -1,21 +1,42 @@
+# ==========================================
 # Dependencies
-node_modules
+# ==========================================
+node_modules/
+/node_modules
+.pnpm-store
+.pnpm-debug.log*
 
-# Environment variables
+# ==========================================
+# Runtime Secrets & Configs (CRITICAL)
+# ==========================================
 .env
+.env.*
 .env.local
 .env.production
+!.env.example
+*.pem
 
-# Prisma
+# ==========================================
+# Prisma ORM
+# ==========================================
 /generated/prisma
+/prisma/migrations/*.sql
 
-# Build output
-dist
+# ==========================================
+# Build & Distribution Caches
+# ==========================================
+dist/
+build/
+*.tsbuildinfo
+.eslintcache
 
-# Logs
+# ==========================================
+# Logs & System Files
+# ==========================================
 logs
 *.log
-
-# OS files
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
 .DS_Store
 Thumbs.db
