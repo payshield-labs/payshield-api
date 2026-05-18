@@ -65,17 +65,42 @@ The service is organized as NestJS modules:
 
 ## Workflow
 
-1. Pick an issue or open a new one with a clear title and description.
-2. Discuss the proposed changes if the scope is unclear.
-3. Create a feature branch from `master` or the main development branch.
-4. Implement the change in a focused way, keeping a single purpose per branch.
-5. Run the recommended scripts before pushing:
+This repository is intended for open source collaboration and uses a clear CI-driven workflow.
+
+1. Browse open issues or open a new issue if your work is not already tracked.
+2. Request feedback on the issue when the scope is unclear or when you need a design decision.
+3. Create a descriptive feature branch from `main` or `master`:
+   - `feature/<short-description>`
+   - `fix/<short-description>`
+   - `chore/<short-description>`
+4. Implement your change in a single branch to keep PRs focused.
+5. Keep changes small, with one main goal per pull request.
+6. Run local validation before pushing:
    - `npm run lint`
    - `npm run test`
-   - `npm run format` (if code formatting changed)
-6. Push your branch and open a pull request.
-7. Include tests, configuration notes, and any environment updates in the PR description.
-8. Address review feedback and update the PR until it is ready to merge.
+   - `npm run format`
+7. Push the branch and open a pull request against `main` or `master`.
+8. Add a clear PR description with:
+   - what you changed
+   - why it was needed
+   - any new environment variables or config updates
+   - tests added or updated
+9. The CI pipeline will run on every push and pull request.
+10. Address review comments, update the branch, and re-run the checks as needed.
+11. Once approved, the PR may be merged by a maintainer.
+
+## CI and validation
+
+A GitHub Actions workflow runs on `push` and `pull_request` events for `main` and `master`. It:
+
+- checks out the repository
+- installs Node.js dependencies
+- runs linting
+- builds the application
+- executes unit tests
+- verifies formatting and type-safe compilation
+
+This ensures that all open source contributions are validated before merge.
 
 ## What to look for
 
