@@ -63,6 +63,20 @@ The service is organized as NestJS modules:
 5. Commit with a clear message.
 6. Submit a pull request with a concise description of the change.
 
+## Workflow
+
+1. Pick an issue or open a new one with a clear title and description.
+2. Discuss the proposed changes if the scope is unclear.
+3. Create a feature branch from `master` or the main development branch.
+4. Implement the change in a focused way, keeping a single purpose per branch.
+5. Run the recommended scripts before pushing:
+   - `npm run lint`
+   - `npm run test`
+   - `npm run format` (if code formatting changed)
+6. Push your branch and open a pull request.
+7. Include tests, configuration notes, and any environment updates in the PR description.
+8. Address review feedback and update the PR until it is ready to merge.
+
 ## What to look for
 
 Useful contribution areas include:
