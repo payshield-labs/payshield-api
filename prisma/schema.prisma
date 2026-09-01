@@ -1,13 +1,15 @@
+// How Prisma generates the TypeScript database client
 generator client {
   provider = "prisma-client-js"
 }
 
+// What kind of database we're using
 datasource db {
   provider = "postgresql"
-  url      = env("DATABASE_URL")
 }
 
-model Job {
+// What data we want to store
+model Job { 
   id          String   @id @default(uuid())
   jobId       BigInt   @unique
   clientWallet String

@@ -4,6 +4,6 @@ import { EscrowService } from './escrow.service';
 
 @Module({
   controllers: [EscrowController],
-  providers: [EscrowService]
+  providers: [EscrowService],
 })
 export class EscrowModule {}

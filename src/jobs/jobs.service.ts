@@ -5,6 +5,7 @@ import { UpdateJobDto } from './dto/update-job.dto';
 @Injectable()
 export class JobsService {
   create(createJobDto: CreateJobDto) {
+    void createJobDto;
     return 'This action adds a new job';
   }
 
@@ -17,6 +18,7 @@ export class JobsService {
   }
 
   update(id: number, updateJobDto: UpdateJobDto) {
+    void updateJobDto;
     return `This action updates a #${id} job`;
   }
 
